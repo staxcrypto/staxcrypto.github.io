@@ -8,33 +8,40 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <script defer src="assets/js/loading.js"></script>
-    <script defer src="assets/js/scroll.js"></script>
+    <script defer src="assets/js/script.js"></script>
+    <script defer src="assets/js/search.js"></script>
 </head>
 <body>
     <div class="loading-screen"></div>
     <div class="background-animation"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Stax Wallet"></a>
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search..." onkeyup="searchPages()">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Learn ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-to-use.html">How to Use</a></li>
+                    </ul>
+                </li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <header>
         <h1>Stax Wallet</h1>
         <p>Buy & Sell Crypto Instantly via Telegram</p>
         <a href="https://t.me/kutuloncats" class="cta-button">Start with Telegram</a>
     </header>
-
-    <section class="features">
-        <div class="feature">
-            <h2>Instant Transactions</h2>
-            <p>Exchange fiat & crypto instantly with no delays.</p>
-        </div>
-        <div class="feature">
-            <h2>Global Payments</h2>
-            <p>Supports multiple fiat and crypto currencies.</p>
-        </div>
-        <div class="feature">
-            <h2>Secure & Private</h2>
-            <p>All transactions are direct, with no balance storage.</p>
-        </div>
-    </section>
 
     <footer>
         <p>&copy; 2025 Stax Wallet. All Rights Reserved.</p>
