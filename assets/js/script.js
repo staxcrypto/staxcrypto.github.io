@@ -1,9 +1,11 @@
-document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(".loading-screen").classList.remove("hide");
-        setTimeout(() => {
-            window.location.href = this.href;
-        }, 500);
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelector(".nav-links");
+
+    document.querySelector(".dropdown").addEventListener("mouseover", function() {
+        this.querySelector(".dropdown-menu").style.display = "block";
+    });
+
+    document.querySelector(".dropdown").addEventListener("mouseleave", function() {
+        this.querySelector(".dropdown-menu").style.display = "none";
     });
 });
