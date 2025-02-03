@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelector(".nav-links");
+    const toggle = document.querySelector(".nav-toggle");
 
-    document.querySelector(".dropdown").addEventListener("mouseover", function() {
-        this.querySelector(".dropdown-menu").style.display = "block";
+    toggle.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
     });
 
-    document.querySelector(".dropdown").addEventListener("mouseleave", function() {
-        this.querySelector(".dropdown-menu").style.display = "none";
+    window.addEventListener("scroll", function() {
+        document.querySelector(".navbar").style.background = window.scrollY > 50 
+            ? "rgba(0, 0, 0, 0.9)" 
+            : "rgba(0, 0, 0, 0.8)";
     });
 });
